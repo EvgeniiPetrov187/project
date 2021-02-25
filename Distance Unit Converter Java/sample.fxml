@@ -1,0 +1,50 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import java.net.URL?>
+
+<GridPane fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml"  alignment="center" hgap="20" vgap="30">
+
+    <MenuBar GridPane.rowIndex="0" GridPane.columnIndex="0">
+        <Menu text="Convert from:" >
+            <MenuItem fx:id="inputMenu1" text="centimeters" onAction="#writeIn1"/>
+            <MenuItem fx:id="inputMenu2" text="meters" onAction="#writeIn2"/>
+            <MenuItem fx:id="inputMenu3" text="kilometers" onAction="#writeIn3"/>
+            <MenuItem fx:id="inputMenu4" text="inches" onAction="#writeIn4"/>
+            <MenuItem fx:id="inputMenu5" text="feet" onAction="#writeIn5"/>
+            <MenuItem fx:id="inputMenu6" text="yards" onAction="#writeIn6"/>
+            <MenuItem fx:id="inputMenu7" text="miles" onAction="#writeIn7"/>
+        </Menu>
+    </MenuBar>
+    <MenuBar GridPane.rowIndex="0" GridPane.columnIndex="1">
+        <Menu text="Convert to:" >
+            <MenuItem fx:id="outputMenu1" text="centimeters" onAction="#writeOut1"/>
+            <MenuItem fx:id="outputMenu2" text="meters" onAction="#writeOut2"/>
+            <MenuItem fx:id="outputMenu3" text="kilometers" onAction="#writeOut3"/>
+            <MenuItem fx:id="outputMenu4" text="inches" onAction="#writeOut4"/>
+            <MenuItem fx:id="outputMenu5" text="feet" onAction="#writeOut5"/>
+            <MenuItem fx:id="outputMenu6" text="yards" onAction="#writeOut6"/>
+            <MenuItem fx:id="outputMenu7" text="miles" onAction="#writeOut7"/>
+        </Menu>
+    </MenuBar>
+
+
+    <TextField fx:id="need" VBox.vgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="1" editable="false"/>
+    <TextField fx:id="become" VBox.vgrow="ALWAYS" GridPane.columnIndex="1" GridPane.rowIndex="1" editable="false"/>
+    <TextField fx:id="input" VBox.vgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <TextField fx:id="output" VBox.vgrow="ALWAYS" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+
+    <Button text="Converting" minWidth="100" onAction="#btnOneClickAction" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <Button text="Clear" minWidth="100" onAction="#clearChat" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+
+    <stylesheets>
+        <URL value="@css/style.css"/>
+    </stylesheets>
+
+</GridPane>
